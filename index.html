@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="PointAvatar: Deformable Point-based Head Avatars from Videos">
+  <meta name="keywords" content="point cloud, 3D head avatar, deformation field, dynamic avatar">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PointAvatar: Deformable Point-based Head Avatars from Videos</title>
+
+ <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">PointAvatar: Deformable Point-based Head Avatars from Videos</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://ait.ethz.ch/people/zhengyuf/">Yufeng Zheng</a><sup>12</sup>,</span>
+            <span class="author-block">
+              <a href="https://yifita.github.io/authors/yifanwang/">Wang Yifan</a><sup>3</sup>,</span>
+            <span class="author-block">
+              <a href="https://stanford.edu/~gordonwz/">Gordon Wetzstein</a><sup>3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://ps.is.mpg.de/~black">Michael J. Black</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://ait.ethz.ch/people/hilliges/">Otmar Hilliges</a><sup>1</sup>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>ETH Zurich,</span>
+            <span class="author-block"><sup>2</sup>Max Planck Institute for Intelligent Systems,</span>
+            <span class="author-block"><sup>3</sup>Stanford University</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://youtu.be/wll_XtgpU7U"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (coming soon)</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <!-- 
+              <span class="link-block">
+                <a href="https://github.com/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+            </div>
+            -->
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</section>
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+<img src="./static/images/pointavatar_teaser.png" height="150%" />
+                <h2 class=" subtitle has-text-centered" style="padding-top: 10px">
+                    PointAvatar learns lighting-disentangled point-based head avatars from a monocular RGB video captured by a smartphone.
+                </h2>
+    </div>
+  </div>
+</section>
+
+
+<model-viewer src=".models/surface_1.glb"  camera-controls auto-rotate></model-viewer>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+           The ability to create realistic, animatable and relightable head avatars from casual video sequences would open up wide ranging applications in communication and entertainment. Current methods either build on explicit 3D morphable meshes (3DMM) or exploit neural implicit representations. The former are limited by fixed topology, while the latter are non-trivial to deform and inefficient to render. Furthermore, existing approaches entangle lighting in the color estimation, thus they are limited in re-rendering the avatar in new environments. In contrast, we propose PointAvatar, a deformable point-based representation that disentangles the source color into intrinsic albedo and normal-dependent shading. We demonstrate that PointAvatar bridges the gap between existing mesh- and implicit representations, combining high-quality geometry and appearance with topological flexibility, ease of deformation and rendering efficiency. We show that our method is able to generate animatable 3D avatars using monocular videos from multiple sources including hand-held smartphones, laptop webcams and internet videos, achieving state-of-the-art quality in challenging cases where previous methods fail, e.g., thin hair strands, while being significantly more efficient in training than competing methods.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/wll_XtgpU7U?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+<section class="section" id="method">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Method</h2>
+    <img src="./static/images/pointavatar_method_figure_v6.png"  height="250" class="center"/>
+
+    <p>
+      Given a monocular RGB video of a subject performing various expressions and poses, our model jointly learns (1) a point cloud representing the pose-agnostic geometry and appearance of the subject in a canonical space; (2) a deformation network that transforms the point cloud into new poses using FLAME expression and pose parameters extracted from the RGB frames; (3) a shading network that outputs a per-point shading vector based on the point normals in the deformed space. The three components can be jointly optimized by comparing the renderings with the input frames.
+    </p>
+  </div>
+</section>
+
+
+<section class="section" id="result">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Result</h2>
+<h3 class="title">Learned 3D Point Clouds</h3>
+<p>
+PointAvatar learns 3D head geometry, represented as point clouds, from monocular RGB videos. 
+</p>
+<p>
+Note that the back of heads are not visible in the training videos and are therefore also not represented by our method. 
+</p>
+
+
+<section class="hero is-light is-small">
+    <div class="hero-body">
+      <div class="container">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-steve">
+            <video poster="" autoplay controls muted loop height="100%">
+              <source src="./videos/IMavatar_male_rgb.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" autoplay controls muted loop height="100%">
+              <source src="./videos/IMavatar_male_normal.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" autoplay controls muted loop height="100%">
+              <source src="./videos/NerFace_male_rgb.mp4" type="video/mp4">
+            </video>
+          </div>
+                    <div class="item">
+            <video poster="" autoplay controls muted loop height="100%">
+              <source src="./videos/NerFace_male_normal.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" autoplay controls muted loop height="100%">
+              <source src="./videos/teaser_male_rgb.mp4" type="video/mp4">
+            </video>
+          </div>
+                    <div class="item">
+            <video poster="" autoplay controls muted loop height="100%">
+              <source src="./videos/teaser_male_normal.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" autoplay controls muted loop height="100%">
+              <source src="./videos/NerFace_male_2_rgb.mp4" type="video/mp4">
+            </video>
+          </div>
+                    <div class="item">
+            <video poster="" autoplay controls muted loop height="100%">
+              <source src="./videos/NerFace_male_2_normal.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" autoplay controls muted loop height="100%">
+              <source src="./videos/IMavatar_female_rgb.mp4" type="video/mp4">
+            </video>
+          </div>
+                    <div class="item">
+            <video poster="" autoplay controls muted loop height="100%">
+              <source src="./videos/IMavatar_female_normal.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content">
+          <h4 class="title">Animation</h4>
+          <video autoplay controls muted loop width="100%">
+            <source src="./videos/animation.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <div class="column">
+        <h4 class="title">Relighting</h4>
+        <div class="columns is-centered">
+          <div class="column content">
+          <video autoplay controls muted loop width="100%">
+            <source src="./videos/relight.mp4"
+                    type="video/mp4">
+          </video>
+          </div>
+        </div>
+      </div>
+    </div>
+ </div>
+</section>
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@misc{Zheng2022pointavatar,
+  author    = {Yufeng Zheng and Wang Yifan and Gordon Wetzstein and Michael J. Black and Otmar Hilliges},
+  title     = {PointAvatar: Deformable Point-based Head Avatars from Videos},
+  publisher   = {arXiv},
+  year      = {2022},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="https://arxiv.org/pdf/2104.03953.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This webpage is built with the template from <a href="https://github.com/nerfies/nerfies.github.io">NeRFies</a>. We sincerely thank <a href="https://keunhong.com/">Keunhong Park</a> for developing and open-sourcing this template.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
+
+
+</html>
