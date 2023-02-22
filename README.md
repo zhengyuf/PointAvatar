@@ -29,12 +29,12 @@ Download a pretrained model from ETH Zurich server ([subject 1](https://dataset.
 Uncompress and put into the experiment folder `./data/experiments`.
 ## Training
 ```
-python scripts/exp_runner.py ---conf ./confs/marcel.conf [--is_continue]
+python scripts/exp_runner.py ---conf ./confs/subject1.conf [--is_continue]
 ```
 ## Evaluation
 Set the *is_eval* flag for evaluation, optionally set *checkpoint* (if not, the latest checkpoint will be used) and *load_path* 
 ```
-python scripts/exp_runner.py --conf ./confs/marcel.conf --is_eval [--checkpoint 60] [--load_path ...]
+python scripts/exp_runner.py --conf ./confs/subject1.conf --is_eval [--checkpoint 60] [--load_path ...]
 ```
 ## GPU requirement
 We train our models with a single Nvidia 80GB A100 GPU. 
