@@ -1,0 +1,22 @@
+mkdir ./data
+mkdir ./data/datasets
+mkdir ./data/experiments
+cd ./data/datasets/
+wget https://dataset.ait.ethz.ch/downloads/IMavatar_data/data/yufeng.zip
+unzip yufeng.zip
+cd ../experiments/
+wget https://dataset.ait.ethz.ch/downloads/IMavatar_data/pointavatar_checkpoint/yufeng.zip
+unzip yufeng.zip
+## download the other subjects with the following commands
+cd ../datasets/
+wget https://dataset.ait.ethz.ch/downloads/IMavatar_data/data/marcel.zip
+unzip marcel.zip
+cd ../experiments/
+wget https://dataset.ait.ethz.ch/downloads/IMavatar_data/pointavatar_checkpoint/marcel.zip
+unzip marcel.zip
+cd ../datasets/
+wget https://dataset.ait.ethz.ch/downloads/IMavatar_data/data/soubhik.zip
+unzip marcel.zip
+cd ../experiments/
+wget https://dataset.ait.ethz.ch/downloads/IMavatar_data/pointavatar_checkpoint/soubhik.zip
+unzip marcel.zip
