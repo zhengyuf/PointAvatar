@@ -1,8 +1,8 @@
 # PointAvatar: Deformable Point-based Head Avatars from Videos 
-## [Paper](https://arxiv.org/abs/2212.08377) | [Video Youtube](https://youtu.be/wll_XtgpU7U) | [Project Page](https://zhengyuf.github.io/pointavatar/)
+## [Paper](https://arxiv.org/abs/2212.08377) | [Video Youtube](https://youtu.be/wll_XtgpU7U) | [Project Page](https://zhengyuf.github.io/PointAvatar/)
 
 
-Official Repository for arXiv paper [*PointAvatar: Deformable Point-based Head Avatars from Videos*](https://arxiv.org/abs/2212.08377). 
+Official Repository for CVPR 2023 paper [*PointAvatar: Deformable Point-based Head Avatars from Videos*](https://arxiv.org/abs/2212.08377). 
 <img src="assets/pointavatar_teaser_v6.png" width="800" height="223"/> 
 ## Getting Started
 * Clone this repo: `git clone git@github.com:zhengyuf/pointavatar.git`
@@ -29,7 +29,7 @@ Download a pretrained model from ETH Zurich server ([subject 1](https://dataset.
 Uncompress and put into the experiment folder `./data/experiments`.
 ## Training
 ```
-python scripts/exp_runner.py ---conf ./confs/subject1.conf [--is_continue]
+python scripts/exp_runner.py --conf ./confs/subject1.conf [--is_continue]
 ```
 ## Evaluation
 Set the *is_eval* flag for evaluation, optionally set *checkpoint* (if not, the latest checkpoint will be used) and *load_path* 
@@ -40,6 +40,7 @@ python scripts/exp_runner.py --conf ./confs/subject1.conf --is_eval [--checkpoin
 We train our models with a single Nvidia 80GB A100 GPU. 
 It's also possible to train PointAvatar with less CUDA memory by limiting the number of points. 
 For e.g., with a 24GB Quadro RTX 6000, you can set `train.max_points_training` and `point_cloud.max_points` to 240000. 
+For evaluation, by default the latest checkpoint is used. To reduce memory usage, you can use earlier checkpoints by adding `—-checkpoint 60` (or 55).
 ## Citation
 If you find our code or paper useful, please cite as:
 ```
