@@ -44,7 +44,7 @@ For evaluation, by default the latest checkpoint is used. To reduce memory usage
 ## Citation
 If you find our code or paper useful, please cite as:
 ```
-@inproceedings{Zheng2022pointavatar,
+@inproceedings{Zheng2023pointavatar,
   author    = {Yufeng Zheng and Wang Yifan and Gordon Wetzstein and Michael J. Black and Otmar Hilliges},
   title     = {PointAvatar: Deformable Point-based Head Avatars from Videos},
   booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)}, 
