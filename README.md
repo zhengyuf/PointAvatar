@@ -18,14 +18,14 @@ pip install -e .
 * Install other requirements: `cd ../pointavatar; pip install -r requirement.txt`
 * Download [FLAME model](https://flame.is.tue.mpg.de/download.php), choose **FLAME 2020** and unzip it, copy 'generic_model.pkl' into `./code/flame/FLAME2020`
 ## Preparing dataset
-Our data format is the same as [IMavatar](https://github.com/zhengyuf/IMavatar/). You can download a preprocessed dataset from [Google drive](https://drive.google.com/file/d/1Hzv41ZkpMK1X9h9Z-B54S-Nn1GcMveb8/view?usp=sharing) (subject 1 and 2) or ETH Zurich server ([subject 1](https://dataset.ait.ethz.ch/downloads/IMavatar_data/data/yufeng.zip), [subject 2](https://dataset.ait.ethz.ch/downloads/IMavatar_data/data/marcel.zip) and [subject 3](https://dataset.ait.ethz.ch/downloads/IMavatar_data/data/soubhik.zip)). You can run `download_data.bash` to download both datasets and pre-trained models.
+Our data format is the same as [IMavatar](https://github.com/zhengyuf/IMavatar/). You can download a preprocessed dataset from [Google drive](https://drive.google.com/drive/folders/1w5_RiCBQ-bZmFzcWdml7ReWZTO2I7V2y?usp=sharing) (subject 1 and 2) or ETH Zurich server ([subject 1](https://dataset.ait.ethz.ch/downloads/IMavatar_data/data/yufeng.zip), [subject 2](https://dataset.ait.ethz.ch/downloads/IMavatar_data/data/marcel.zip) and [subject 3](https://dataset.ait.ethz.ch/downloads/IMavatar_data/data/soubhik.zip)). You can run `download_data.bash` to download both datasets and pre-trained models.
 
-If you'd like to generate your own dataset, please follow intructions in the [IMavatar repo](https://github.com/zhengyuf/IMavatar/tree/main/preprocess).
+If you'd like to generate your own dataset, please follow the instructions in the [IMavatar repo](https://github.com/zhengyuf/IMavatar/tree/main/preprocess).
 
 Link the dataset folder to `./data/datasets`. Link the experiment output folder to `./data/experiments`.
 
 ## Pre-trained model
-Download a pretrained model from ETH Zurich server ([subject 1](https://dataset.ait.ethz.ch/downloads/IMavatar_data/pointavatar_checkpoint/yufeng.zip), [subject 2](https://dataset.ait.ethz.ch/downloads/IMavatar_data/pointavatar_checkpoint/marcel.zip) and [subject 3](https://dataset.ait.ethz.ch/downloads/IMavatar_data/pointavatar_checkpoint/soubhik.zip)). See `download_data.bash`.
+Download a pretrained model from [Google drive](https://drive.google.com/drive/folders/1MM_NSeUHLHhX-E_LXKC7tAtHZ7-AEtqZ?usp=sharing) (subject 1 and 2) or ETH Zurich server ([subject 1](https://dataset.ait.ethz.ch/downloads/IMavatar_data/pointavatar_checkpoint/yufeng.zip), [subject 2](https://dataset.ait.ethz.ch/downloads/IMavatar_data/pointavatar_checkpoint/marcel.zip) and [subject 3](https://dataset.ait.ethz.ch/downloads/IMavatar_data/pointavatar_checkpoint/soubhik.zip)). See `download_data.bash`.
 Uncompress and put into the experiment folder `./data/experiments`.
 ## Training
 ```
@@ -40,7 +40,7 @@ python scripts/exp_runner.py --conf ./confs/subject1.conf --is_eval [--checkpoin
 We train our models with a single Nvidia 80GB A100 GPU. 
 It's also possible to train PointAvatar with less CUDA memory by limiting the number of points. 
 For e.g., with a 24GB Quadro RTX 6000, you can set `train.max_points_training` and `point_cloud.max_points` to 240000. 
-For evaluation, by default the latest checkpoint is used. To reduce memory usage, you can use earlier checkpoints by adding `—-checkpoint 60` (or 55).
+For evaluation, by default, the latest checkpoint is used. To reduce memory usage, you can use earlier checkpoints by adding `—-checkpoint 60` (or 55).
 ## Citation
 If you find our code or paper useful, please cite as:
 ```
