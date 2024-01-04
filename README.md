@@ -25,7 +25,7 @@ If you'd like to generate your own dataset, please follow the instructions in th
 Link the dataset folder to `./data/datasets`. Link the experiment output folder to `./data/experiments`.
 
 ## Pre-trained model
-Download a pretrained model from [Google drive](https://drive.google.com/drive/folders/1MM_NSeUHLHhX-E_LXKC7tAtHZ7-AEtqZ?usp=sharing) (subject 1 and 2) or ETH Zurich server ([subject 1](https://dataset.ait.ethz.ch/downloads/IMavatar_data/pointavatar_checkpoint/yufeng.zip), [subject 2](https://dataset.ait.ethz.ch/downloads/IMavatar_data/pointavatar_checkpoint/marcel.zip) and [subject 3](https://dataset.ait.ethz.ch/downloads/IMavatar_data/pointavatar_checkpoint/soubhik.zip)). See `download_data.bash`.
+Download a pretrained model from ETH Zurich server ([subject 1](https://dataset.ait.ethz.ch/downloads/IMavatar_data/pointavatar_checkpoint/yufeng.zip), [subject 2](https://dataset.ait.ethz.ch/downloads/IMavatar_data/pointavatar_checkpoint/marcel.zip) and [subject 3](https://dataset.ait.ethz.ch/downloads/IMavatar_data/pointavatar_checkpoint/soubhik.zip)). See `download_data.bash`.
 Uncompress and put into the experiment folder `./data/experiments`.
 ## Training
 ```
