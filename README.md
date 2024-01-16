@@ -18,14 +18,14 @@ pip install -e .
 * Install other requirements: `cd ../pointavatar; pip install -r requirement.txt`
 * Download [FLAME model](https://flame.is.tue.mpg.de/download.php), choose **FLAME 2020** and unzip it, copy 'generic_model.pkl' into `./code/flame/FLAME2020`
 ## Preparing dataset
-Our data format is the same as [IMavatar](https://github.com/zhengyuf/IMavatar/). You can download a preprocessed dataset from [Google drive](https://drive.google.com/drive/folders/1w5_RiCBQ-bZmFzcWdml7ReWZTO2I7V2y?usp=sharing) (subject 1 and 2) or ETH Zurich server ([subject 1](https://dataset.ait.ethz.ch/downloads/IMavatar_data/data/yufeng.zip), [subject 2](https://dataset.ait.ethz.ch/downloads/IMavatar_data/data/marcel.zip) and [subject 3](https://dataset.ait.ethz.ch/downloads/IMavatar_data/data/soubhik.zip)). You can run `download_data.bash` to download both datasets and pre-trained models.
+Our data format is the same as [IMavatar](https://github.com/zhengyuf/IMavatar/). You can download a preprocessed dataset from [Google drive](https://drive.google.com/drive/folders/1w5_RiCBQ-bZmFzcWdml7ReWZTO2I7V2y?usp=sharing) (subject 1 and 2) or ETH Zurich server ([subject 1](https://dataset.ait.ethz.ch/downloads/IMavatar_data/data/subject1.zip), [subject 2](https://dataset.ait.ethz.ch/downloads/IMavatar_data/data/subject2.zip) and [subject 3](https://dataset.ait.ethz.ch/downloads/IMavatar_data/data/subject3.zip)). You can run `download_data.bash` to download both datasets and pre-trained models.
 
 If you'd like to generate your own dataset, please follow the instructions in the [IMavatar repo](https://github.com/zhengyuf/IMavatar/tree/main/preprocess).
 
 Link the dataset folder to `./data/datasets`. Link the experiment output folder to `./data/experiments`.
 
 ## Pre-trained model
-Download a pretrained model from ETH Zurich server ([subject 1](https://dataset.ait.ethz.ch/downloads/IMavatar_data/pointavatar_checkpoint/yufeng.zip), [subject 2](https://dataset.ait.ethz.ch/downloads/IMavatar_data/pointavatar_checkpoint/marcel.zip) and [subject 3](https://dataset.ait.ethz.ch/downloads/IMavatar_data/pointavatar_checkpoint/soubhik.zip)). See `download_data.bash`.
+Download a pretrained model from ETH Zurich server ([subject 1](https://dataset.ait.ethz.ch/downloads/IMavatar_data/pointavatar_checkpoint/subject1.zip), [subject 2](https://dataset.ait.ethz.ch/downloads/IMavatar_data/pointavatar_checkpoint/subject2.zip) and [subject 3](https://dataset.ait.ethz.ch/downloads/IMavatar_data/pointavatar_checkpoint/subject3.zip)). See `download_data.bash`.
 Uncompress and put into the experiment folder `./data/experiments`.
 ## Training
 ```
