@@ -18,7 +18,7 @@ pip install -e .
 * Install other requirements: `cd ../pointavatar; pip install -r requirement.txt`
 * Download [FLAME model](https://flame.is.tue.mpg.de/download.php), choose **FLAME 2020** and unzip it, copy 'generic_model.pkl' into `./code/flame/FLAME2020`
 ## Preparing dataset
-Our data format is the same as [IMavatar](https://github.com/zhengyuf/IMavatar/). You can download a preprocessed dataset from [Google drive](https://drive.google.com/drive/folders/1w5_RiCBQ-bZmFzcWdml7ReWZTO2I7V2y?usp=sharing) (subject 1 and 2) or ETH Zurich server ([subject 1](https://dataset.ait.ethz.ch/downloads/IMavatar_data/data/subject1.zip), [subject 2](https://dataset.ait.ethz.ch/downloads/IMavatar_data/data/subject2.zip) and [subject 3](https://dataset.ait.ethz.ch/downloads/IMavatar_data/data/subject3.zip)). You can run `download_data.bash` to download both datasets and pre-trained models.
+Our data format is the same as [IMavatar](https://github.com/zhengyuf/IMavatar/). You can download a preprocessed dataset from the ETH Zurich server ([subject 1](https://dataset.ait.ethz.ch/downloads/IMavatar_data/data/subject1.zip), [subject 2](https://dataset.ait.ethz.ch/downloads/IMavatar_data/data/subject2.zip) and [subject 3](https://dataset.ait.ethz.ch/downloads/IMavatar_data/data/subject3.zip)). You can run `download_data.bash` to download both datasets and pre-trained models.
 
 If you'd like to generate your own dataset, please follow the instructions in the [IMavatar repo](https://github.com/zhengyuf/IMavatar/tree/main/preprocess).
 
